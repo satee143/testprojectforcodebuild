@@ -32,10 +32,6 @@ COPY ./ /app/
 
 WORKDIR /app/
 
-RUN git clone -b $BRANCHNAME https://${GIT_TOKEN}@spglobal.visualstudio.com/ratingsproducts/_git/SP-RATINGS-Ratings360-QAAutomation-PyRAFT 
-
-WORKDIR /app/SP-RATINGS-Ratings360-QAAutomation-PyRAFT 
-
 
 	
 RUN python3 -m pip install pytest
