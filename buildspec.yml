@@ -12,6 +12,7 @@ phases:
     commands:
       - docker build -t mypublicdocker:${image_tag} -f Dockerfile .
       - docker tag mypublicdocker:latest public.ecr.aws/e5r7r1t8/mypublicdocker:latest
+      - aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/e5r7r1t8
 
       
   post_build:
