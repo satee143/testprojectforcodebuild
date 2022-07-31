@@ -15,9 +15,9 @@ phases:
       
   post_build:
     commands:
-      - aws s3 cp ./pytest_reports/pytest_report.html s3://mytestbucketfortrigger/pytest_report.html 
+      - aws s3 cp ./pytest_reports/pytest_report.html s3://testbucketfordocker/pytest_report.html 
       - |
-        echo "HTML Report:https://s3.console.aws.amazon.com/s3/object/mytestbucketfortrigger?region=us-east-1&prefix=pytest_report.html"   
+        echo "HTML Report:https://s3.console.aws.amazon.com/s3/object/testbucketfordocker?region=us-east-1&prefix=pytest_report.html"   
 
 reports:
   pytest_reports:
