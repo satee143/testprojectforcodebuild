@@ -15,4 +15,4 @@ phases:
       
   post_build:
     commands:
-      - docker push public.ecr.aws/e5r7r1t8/mypublicdocker:${image_tag}
+      - docker push public.ecr.aws/e5r7r1t8/mypublicdocker:latest
