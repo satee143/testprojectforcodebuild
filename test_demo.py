@@ -13,5 +13,5 @@ def test_google_c():
     driver.get("https://google.com")
     time.sleep(2)
     title=driver.title
-    assert title=='Gogle'
+    assert title=='Google'
     driver.close()
