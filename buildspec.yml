@@ -4,14 +4,14 @@ phases:
   install:
     runtime-versions:
       docker: 18
-pre_build:
-  commands:
-    - echo logging into ECR
-    - $(aws ecr get-login --no-include-email --region us-east-1)
-build:
+  pre_build:
+    commands:
+      - echo logging into ECR
+      - $(aws ecr get-login --no-include-email --region us-east-1)
+  build:
     commands:
       - docker build -t mypublicdocker:${image_tag} -f Dockerfile .
-      
+
       
   post_build:
     commands:
