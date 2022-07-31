@@ -23,7 +23,6 @@ RUN dpkg-divert --add --rename --divert /opt/google/chrome/google-chrome.real /o
  
 
 RUN apt-get update && apt-get install -y \
-    python \
     python-setuptools \
     python3-pip
 
