@@ -13,6 +13,7 @@ phases:
     commands:
       - docker build -t mydockerfirst -f Dockerfile .
       - docker tag mydockerfirst:latest 118400959103.dkr.ecr.us-east-1.amazonaws.com/mydockerfirst:latest
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 674715443267.dkr.ecr.us-east-1.amazonaws.com
 
 
   post_build:
