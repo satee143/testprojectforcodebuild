@@ -11,10 +11,11 @@ phases:
 
   build:
     commands:
-      - docker build -t mytestproject -f Dockerfile .
+      - docker build -t mytestproject:latest -f Dockerfile .
+      - docker tag mytestproject:latest satee143/mytestproject:latest
 
 
 
   post_build:
     commands:
-      - docker push satee143/mytestproject
+      - docker push satee143/mytestproject:latest
