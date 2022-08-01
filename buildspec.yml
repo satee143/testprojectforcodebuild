@@ -13,6 +13,7 @@ phases:
     commands:
       - docker build -t mytestproject:latest -f Dockerfile .
       - docker tag mytestproject:latest satee143/mytestproject:latest
+      - docker login -u satee143 -p Satee@1432
 
 
 
